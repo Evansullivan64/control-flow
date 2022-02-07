@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
     minimumOf(5,7)
     rangeOf(4)
     inferredTypeOf(0.0F)
-    stringContains("wordle")
+    stringContains("wordlea")
 }
 
 fun minimumOf(number1: Long, number2: Long){
@@ -50,10 +50,11 @@ fun inferredTypeOf(variable: Any){
    }
 
 fun stringContains(str : String){
-    //TODO If the string, passed as a parameter:
-    //    - contains the letter A, print the string and say it contains A.
-    //    - contains the letter B, print the string and say it contains B.
-    //    - contains the letter C, print the string and say it contains C.
-    //    - is empty, inform the user that it is empty.
-    //    - otherwise print the string and say it doesn't contain A, B or C.
-}
+    when {
+        str.isEmpty()-> println("String is empty")
+        str.contains('A')|| str.contains('a')-> println("$str contains A")
+        str.contains('B')|| str.contains('b')-> println("$str contains B")
+        str.contains('C')|| str.contains('c')-> println("$str contains C")
+        else-> println("$str doesn't contain A,B, or C");
+    }
+  }
