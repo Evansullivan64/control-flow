@@ -11,6 +11,8 @@
 //     a lower grade for the assignment as it is a software development tooling module.
 // Hint: the week 2 syntax labs are a good support for completing this project
 
+
+//in the main method we are calling the methods
 fun main(args: Array<String>) {
     minimumOf(5,7)
     rangeOf(4)
@@ -18,6 +20,9 @@ fun main(args: Array<String>) {
     stringContains("wordlea")
 }
 
+
+
+//this method prints which number is bigger
 fun minimumOf(number1: Long, number2: Long){
     if(number1 < number2){
        println("the first number: $number1 is less than second number: $number2");
@@ -27,6 +32,9 @@ fun minimumOf(number1: Long, number2: Long){
 
 }
 
+
+
+//this method prints what range a number falls into
 fun rangeOf(number: Int){
     when{
         number <= 0-> println("the number $number is either less than or equal to zero");
@@ -37,6 +45,9 @@ fun rangeOf(number: Int){
     }
    }
 
+
+
+//this method prints what type of variable the inferred type is.
 fun inferredTypeOf(variable: Any){
     when {
         variable is Int -> println("type of $variable is an Int");
@@ -49,6 +60,9 @@ fun inferredTypeOf(variable: Any){
     }
    }
 
+
+
+//this method prints whether of not a string contains a,b or c
 fun stringContains(str : String){
     when {
         str.isEmpty()-> println("String is empty")
